@@ -1,0 +1,42 @@
+<div class="card">
+
+   <div class="content">
+
+      <table>
+         <thead>
+            <tr>
+               <th>Producto</th>
+               <th>Precio</th>
+               <th>Cantidad</th>
+               <th>Accion</th>
+            </tr>
+         </thead>
+         <tbody>
+            @for (item of ShoppingProduct; track $index) {
+            <tr>
+               <td>{{ item.title }}</td>
+               <td>{{ (item?.price ?? 0) * (item?.stock ?? 0) | currency }}</td>
+               <td>{{ item.stock }}</td>
+               <td>
+
+                  <button (click)="removeFromCart(item)">
+                     <mat-icon class="card-icon">
+                        remove
+
+                     </mat-icon>
+
+
+                  </button>
+               </td>
+            </tr>
+            }
+
+
+         </tbody>
+      </table>
+
+
+   </div>
+
+
+</div>

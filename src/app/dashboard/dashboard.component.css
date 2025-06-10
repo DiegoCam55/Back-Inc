@@ -1,0 +1,47 @@
+/* Estilos para dashboard con header y menú lateral */
+.dashboard-container {
+  background: #f1f5f9;
+  color: #000;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  width: 100%;
+  flex-shrink: 0;
+
+}
+
+.dashboard-main {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard-menu {
+  flex-shrink: 0;
+  height: 100%;
+  width: 220px;
+  box-sizing: border-box;
+}
+
+.dashboard-content {
+  flex: 1 1 0;
+  display: block;
+  padding: 32px 16px;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-content>* {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}

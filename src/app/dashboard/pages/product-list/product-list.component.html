@@ -1,0 +1,9 @@
+<div class="product-list-search">
+    <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange($event)"
+        placeholder="Buscar productos..." class="search-input" />
+</div>
+<div class="product-list-cards">
+    @for (product of products; track $index) {
+    <app-card [product]="product" (addToCartEvent)="addToCart($event)"></app-card>
+    }
+</div>

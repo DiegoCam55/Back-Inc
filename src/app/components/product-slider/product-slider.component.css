@@ -1,0 +1,100 @@
+.carousel-card {
+  width: 500px;
+  margin: 24px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+  padding: 0;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.carousel-item.active {
+  display: block;
+  opacity: 1;
+  position: relative;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-text {
+  flex: 1;
+  padding: 24px 16px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.carousel-text span {
+  font-size: 0.95rem;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.carousel-text h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.2rem;
+}
+
+.carousel-text p {
+  margin: 0 0 12px 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.carousel-text button {
+  align-self: flex-start;
+  padding: 6px 18px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.carousel-text button:hover {
+  background: #125ea2;
+}
+
+.carousel-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 16px;
+}
+
+.carousel-image img {
+  width: 160px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+}

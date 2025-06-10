@@ -1,0 +1,17 @@
+<div class="carousel-card">
+  <div class="carousel-inner"> 
+    <div class="carousel-item" *ngFor="let item of items; let i = index" [class.active]="i === currentIndex">
+      <div class="carousel-content">
+        <div class="carousel-text">
+          <span>{{ item.category.name }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.price | currency }}</p>
+          <button (click)="showNext()">Siguiente</button>
+        </div>
+        <div class="carousel-image">
+          <img [src]="item.images[0]" [alt]="item.title" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

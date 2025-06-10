@@ -1,0 +1,10 @@
+<div class="header">
+    <h1>BANK INC. </h1>
+    <button class="shoppingBotton" (click)="openCart()">
+        <mat-icon class="card-icon">
+            shopping_cart
+        </mat-icon>
+        <span *ngIf="cartCount > 0" class="badge">{{ cartCount }}</span>
+    </button>
+    <app-shopping-modal *ngIf="showCart && cartCount != 0" class="shopping-modal"></app-shopping-modal>
+</div>

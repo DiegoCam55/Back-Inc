@@ -1,0 +1,16 @@
+<!-- Menú lateral -->
+<div class="content">
+    <nav class="sidebar-menu">
+        <h2>Categorías</h2>
+        <ul class="category-list">
+            @for (categoria of categories; track $index) {
+            <li>
+                <button class="category-btn" [class.active]="selectedCategory === categoria.id"
+                    (click)="changeCategory(categoria.id)">
+                    {{ categoria.name }}
+                </button>
+            </li>
+            }
+        </ul>
+    </nav>
+</div>
