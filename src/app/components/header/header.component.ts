@@ -18,6 +18,7 @@ export class HeaderComponent {
   showCart = false;
 
   constructor(private store: Store<AppState>) {
+    // llmada de redux o NgRX para asignar el número de productos en el carrito
     this.store
       .select((state) => state.shopping.Productos.length)
       .subscribe((count) => {
@@ -26,6 +27,7 @@ export class HeaderComponent {
   }
 
   openCart() {
+    // abrir o cerrar el carrito
     if (this.cartCount != 0) this.showCart = !this.showCart;
   }
 }

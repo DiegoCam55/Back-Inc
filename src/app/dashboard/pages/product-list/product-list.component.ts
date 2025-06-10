@@ -37,6 +37,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
+    // Llamada al servicio para obtener productos con base en la categoría
     this.categorySubscription = this.store
       .select((state: AppState) => state.shopping.categoryId)
       .subscribe((selectedCategoryId: number) => {
@@ -59,6 +60,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   loadProducts() {
+    // Cargar productos según la categoría seleccionada o realizar búsqueda
     if (this.categoryId !== 0) {
       this.productsService.getCategoriesProduct(this.categoryId).subscribe({
         next: (data) => {
@@ -94,6 +96,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   onSearchChange(term: string) {
+    // Actualizar el término de búsqueda y recargar productos
     if (this.categoryId !== 0) {
       this.categoryId = 0;
       this.loadProducts();
@@ -102,7 +105,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   addToCart($event: Producto) {
-    console.log($event);
+    // Llamada de redux o NgRX para agregar productos al carrito
     this.store.dispatch(action.addProduct({ producto: $event }));
   }
 }

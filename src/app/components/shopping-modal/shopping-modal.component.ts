@@ -25,6 +25,7 @@ export class ShoppingModalComponent implements OnInit {
   constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
+    // llamada de redux o NgRX para asignar los productos en el carrito
     this.store
       .select((state) => state.shopping.Productos)
       .subscribe((product) => {
@@ -33,6 +34,7 @@ export class ShoppingModalComponent implements OnInit {
   }
 
   removeFromCart(producto: Producto) {
+     // llamada de redux o NgRX para eliminar los productos en el carrito
     this.store.dispatch(removeProduct({ producto }));
   }
 }

@@ -19,6 +19,7 @@ export class ProductSliderComponent implements OnInit {
   items: Producto[] = [];
 
   ngOnInit() {
+    //llamar servicios 
     this.productsService.getAllproduct().subscribe({
       next: (data: Producto[]) => {
         this.items = data.slice(10, 30);

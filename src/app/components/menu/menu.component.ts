@@ -24,6 +24,7 @@ export class MenuComponent implements OnInit {
   selectedCategory: number = 0;
 
   ngOnInit(): void {
+    //llamar servicios  y asignar las categorías
     this.productsService.getAllCategories().subscribe({
       next: (data: Category[]) => {
         this.categories = [
@@ -53,6 +54,7 @@ export class MenuComponent implements OnInit {
       },
     });
 
+    //llamada de redux o NgRX para asignar la categoría seleccionada
     this.store
       .select((state) => state.shopping.categoryId)
       .subscribe((id) => {

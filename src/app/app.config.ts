@@ -21,7 +21,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     importProvidersFrom(HttpClientModule),
     provideHttpClient(withFetch()),
-
+    // configuración de NgRx Store
     provideStore(appReducers),
     provideStoreDevtools({
       maxAge: 25,
