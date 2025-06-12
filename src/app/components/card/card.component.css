@@ -1,17 +1,21 @@
 .product-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 16px;
   width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: box-shadow 0.2s;
+  min-height: 300px;
+  /* Permite que el contenido principal crezca y el footer quede abajo */
 }
+
 .product-card:hover {
   box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
 }
+
 .product-image {
   width: 100%;
   height: 140px;
@@ -19,19 +23,30 @@
   border-radius: 8px;
   margin-bottom: 12px;
 }
+
+.product-info {
+  text-align: left;
+  width: 100%;
+  flex: 1 1 auto;
+  /* Hace que el contenido principal crezca y empuje el footer */
+}
+
 .product-info h3 {
   margin: 0 0 4px 0;
   font-size: 1.1rem;
 }
+
 .product-info p {
   margin: 0 0 6px 0;
   color: #1976d2;
   font-weight: 500;
 }
+
 .product-category {
   font-size: 0.95rem;
   color: #666;
 }
+
 .cart-btn {
   background: none;
   border: none;
@@ -45,11 +60,25 @@
   margin-top: 8px;
   margin-left: auto;
 }
+
 .cart-btn:hover {
   background: #e3f0fd;
 }
+
 .cart-icon {
   width: 22px;
   height: 22px;
   display: block;
+}
+
+.color-icon {
+  color: #1976d2;
+}
+
+.produc-action {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  /* El footer siempre queda abajo */
 }

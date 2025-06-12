@@ -2,7 +2,7 @@
 <div class="content">
     <nav class="sidebar-menu">
         <h2>Categorías</h2>
-        <ul class="category-list">
+        <ul class="category-list truncate">
             @for (categoria of categories; track $index) {
             <li>
                 <button class="category-btn" [class.active]="selectedCategory === categoria.id"
